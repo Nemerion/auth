@@ -8,13 +8,12 @@ const router = require('./router');
 const mongoose = require('mongoose');
 
 // DB Setup
-mongoose.connect('mongodb://127.0.0.1:27017/auth', { useNewUrlParser: true });
+mongoose.connect('mongodb://localhost:27017/auth', { useNewUrlParser: true });
 
 // App Setup
 app.use(morgan('combined'));
 app.use(bodyParser.json({type: '*/*'}));
 router(app);
-
 
 // Server Setup
 const port = process.env.PORT || 3090;
