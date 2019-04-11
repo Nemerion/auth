@@ -1,9 +1,12 @@
 import React from 'react';
 
-export default () => {
+import Header from './Header';
+
+export default ({ children }) => {
   return (
     <div>
-      Hi wachin
+      <Header />
+      {children}
     </div>
   );
 };
